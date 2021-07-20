@@ -78,7 +78,6 @@ def single_score_with_explain(user_request: SingleRequestId):
 @app.post("/bulk_score", response_model=ScoresExplain)
 def bulk_score_with_explain(user_request: MultipleRequestId):
     drug_ids = user_request.drug_ids
-
     X = data.loc[drug_ids, :]
     preds = pipe.predict(X)
     preds = pd.Series(preds, index=X.index)
@@ -86,6 +85,9 @@ def bulk_score_with_explain(user_request: MultipleRequestId):
     X = lgb_transformer.transform(X)
     for index, row in X.iterrows():
         explain = get_shap_explain(row, features, load_explainer, top=10)
+        print("INDEX", index)
+        print(preds[index])
+        print(explain)
         new_element = ScoreExplain(drug_id=index, score=preds[index], explain=explain)
         result.append(new_element)
 
