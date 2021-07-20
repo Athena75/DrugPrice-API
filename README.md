@@ -47,10 +47,15 @@ A docker-compose to manage services between others (as for now, there's only one
 
 ```
 $ git clone https://github.com/Athena75/DrugPrice-API.git
+$ cd DrugPrice-API.git
 $ docker-compose up --build
 ```
 
-To check the API is doc, you can open http://localhost:8000/docs: it would redirect you to the interactive interface where you can try the API from the browser.
+To check the API is doc, you can open http://localhost:8000/docs: it would redirect you to the interactive interface where you can try the API from the browser. You get something like this:
+
+![alt text](https://github.com/Athena75/DrugPrice-API/blob/main/deliveries/docs/docs.png?raw=true)
+
+The index page contains the list of the **drug_id** extracted from `test.csv`, that you can test with our implemented routes
 
 Other ways to try the API request:
 * Postman 
