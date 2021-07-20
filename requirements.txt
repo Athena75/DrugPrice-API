@@ -1,0 +1,7 @@
+uvicorn==0.14.0
+pandas
+fastapi==0.66.0
+numpy==1.20.3
+scikit-learn==0.24.2
+lightgbm
+shap

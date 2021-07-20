@@ -1,0 +1,6 @@
+*.csv
+*.pyc
+.ipynb_checkpoints/
+.idea
+__pycache__/
+*.sav

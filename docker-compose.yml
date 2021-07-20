@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  api:
+    image: api:latest
+    build: .
+    volumes:
+      - ./data:/data:ro
+      - ./models:/models:rw
+    ports:
+      - 8000:8000
+    restart: always
