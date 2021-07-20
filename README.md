@@ -47,7 +47,7 @@ A docker-compose to manage services between others (as for now, there's only one
 
 ```
 $ git clone https://github.com/Athena75/DrugPrice-API.git
-$ cd DrugPrice-API.git
+$ cd DrugPrice-API
 $ docker-compose up --build
 ```
 
