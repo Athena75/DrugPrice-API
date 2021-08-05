@@ -13,7 +13,7 @@ To get more information about data explaratory and features engineering steps ch
 * `notebooks/feature-engineering.ipynb` : the retained outputs are:
     * **data/transformed/train.pkl** : transformed training dataset: this dataset is passed to the model to be trained on
     * **data/transformed/test.pkl**: transformed test dataset: it will be used by the API to get single data inputs from a test drug id, that will be passed to the model to get score prediction
-* `notebooks/modeling.ipynb`: in this notebook you have all the modeling part (the lightGBM validated with stratified crosss validation technique, and the TreExplorer used to explain the model)
+* `notebooks/modeling.ipynb`: in this notebook you have all the modeling part (the lightGBM validated with stratified crosss validation technique, and the TreeExplainer used to explain the model)
   The retained outputs of the notebooks are:
   * **models/LGB3.pkl** : a pre-trained lightgbm with a Cross-Validation method
   * **models/TreeExplainer_LGB3.sav** : a TreeExplainer pre-trained on the generated model: it will ba applied directeley by the api to extract the top features 
